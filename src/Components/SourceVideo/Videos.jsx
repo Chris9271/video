@@ -16,34 +16,41 @@ const Videos = (props) => {
     Modal.setAppElement('#modal-root');
 
     const {videos} = props;
+    const [id, setId] = useState("");
     const [watchVideo, setWatchVideo] = useState(false);
-    const openVideoModal = () => setWatchVideo(true);
+    const openVideoModal = (e, id) => {
+        e.preventDefault();
+        setId(id)
+        setWatchVideo(true);
+    }
     const closeVideoModal = () => setWatchVideo(false);
+
 
     return (
         <div className="iterate-video">
             {videos.map((video) => (
             <div className="video-appearance" key={video.id.videoId}>
+            {id === video.id.videoId ? 
             <Modal
                 isOpen={watchVideo}
                 onRequestClose={closeVideoModal}
                 style={customStyle}
                 >
-                <div>
-                    <div className="video">
-                        <iframe
-                            width="600"
-                            height="400"
-                            title={video.snippet.title}
-                            src={`https://www.youtube.com/embed/${video.id.videoId}`}
-                            allowFullScreen
-                        >
-                        </iframe>
-                    </div>
+                <div className="video">
+                    <iframe
+                        width="600"
+                        height="400"
+                        title={video.snippet.title}
+                        src={`https://www.youtube.com/embed/${id}`}
+                        allowFullScreen
+                    >
+                    </iframe>
                 </div>
             </Modal>
+            : null
+        }
                 <div className="video-image">
-                    <img src={video.snippet.thumbnails.medium.url} alt={video.snippet.title} className="image" onClick={openVideoModal}/>
+                    <img src={video.snippet.thumbnails.medium.url} alt={video.snippet.title} className="image" onClick={(e) => openVideoModal(e, video.id.videoId)}/>
                 </div>
                 <h3 className="video-description">{video.snippet.title}</h3>
                 <div className="video-source">

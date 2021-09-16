@@ -1,12 +1,3 @@
-// "kind": "youtube#searchListResponse",
-// "etag": "4NNNB4hlwRMhYjL72VNjI2jmr54",
-// "nextPageToken": "CBQQAA",
-// "regionCode": "TW",
-// "pageInfo": {
-//     "totalResults": 1000000,
-//     "resultsPerPage": 20
-// },
-
 const HTML = {
     data: {
         "items": [

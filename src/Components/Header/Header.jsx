@@ -3,7 +3,7 @@ import Logo from '../../image/logo.png';
 import './header.scss';
 
 const Header = (props) => {
-    const {updateVideo} = props;
+    const {updateVideo, checkDefault} = props;
     const [prevValue, setPrevValue] = useState("");
     const [prevVal, setPrevVal] = useState();
 
@@ -31,6 +31,8 @@ const Header = (props) => {
                 clicked.classList.remove('underline3');
                 clicked.classList.remove('underline4');
                 clicked.classList.remove('underline5');
+                clicked.classList.remove('underline6');
+                clicked.classList.remove('underline7');
                 break;
             case "CSS":
                 clicked.classList.remove('underline1');
@@ -38,6 +40,8 @@ const Header = (props) => {
                 clicked.classList.remove('underline3');
                 clicked.classList.remove('underline4');
                 clicked.classList.remove('underline5');
+                clicked.classList.remove('underline6');
+                clicked.classList.remove('underline7');
                 break;
             case "JavaScript":
                 clicked.classList.remove('underline1');
@@ -45,6 +49,8 @@ const Header = (props) => {
                 clicked.classList.add('underline3');
                 clicked.classList.remove('underline4');
                 clicked.classList.remove('underline5');
+                clicked.classList.remove('underline6');
+                clicked.classList.remove('underline7');
                 break;
             case "React":
                 clicked.classList.remove('underline1');
@@ -52,6 +58,8 @@ const Header = (props) => {
                 clicked.classList.remove('underline3');
                 clicked.classList.add('underline4');
                 clicked.classList.remove('underline5');
+                clicked.classList.remove('underline6');
+                clicked.classList.remove('underline7');
                 break;
             case "How To Learn":
                 clicked.classList.remove('underline1');
@@ -59,6 +67,17 @@ const Header = (props) => {
                 clicked.classList.remove('underline3');
                 clicked.classList.remove('underline4');
                 clicked.classList.add('underline5');
+                clicked.classList.remove('underline6');
+                clicked.classList.remove('underline7');
+                break;
+            case "Study Music":
+                clicked.classList.remove('underline1');
+                clicked.classList.remove('underline2');
+                clicked.classList.remove('underline3');
+                clicked.classList.remove('underline4');
+                clicked.classList.remove('underline5');
+                clicked.classList.add('underline6');
+                clicked.classList.remove('underline7');
                 break;
             default:
                 break;
@@ -71,12 +90,13 @@ const Header = (props) => {
         <div className="header">
             <img src={Logo} alt="logo" className="header-image"/>
             <div className="nav-option">
-                <ul className="nav-ul">
+                <ul className="nav-ul" onClick={(e)=>checkDefault(e.target.innerText)}>
                     <li className="nav-li-one" data-value="html5" onClick={(e) => handleClick(e)} defaultValue>HTML</li>
                     <li className="nav-li-two" data-value="css3" onClick={(e) => handleClick(e)}>CSS</li>
                     <li className="nav-li-three" data-value="javascript" onClick={(e) =>handleClick(e)}>JavaScript</li>
                     <li className="nav-li-four" data-value="react js" onClick={(e) =>handleClick(e)}>React</li>
                     <li className="nav-li-five" data-value="how to learn programming" onClick={(e) =>handleClick(e)}>How To Learn</li>
+                    <li className="nav-li-six" data-value="study music" onClick={(e) =>handleClick(e)}>Study Music</li>
                     <li className="nav-underline"></li>
                 </ul>
             </div>

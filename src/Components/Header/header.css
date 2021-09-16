@@ -33,7 +33,8 @@
 .nav-li-two,
 .nav-li-three,
 .nav-li-four,
-.nav-li-five {
+.nav-li-five,
+.nav-li-six {
   padding: 0.5em 1em;
   font-size: 1.6em;
   cursor: pointer;
@@ -43,7 +44,8 @@
 .nav-li-two:hover,
 .nav-li-three:hover,
 .nav-li-four:hover,
-.nav-li-five:hover {
+.nav-li-five:hover,
+.nav-li-six:hover {
   color: steelblue;
 }
 
@@ -99,6 +101,18 @@
   position: absolute;
   top: 12%;
   left: 34%;
+  background-color: steelblue;
+  width: 7.5em;
+  height: 0.1em;
+  z-index: 1;
+  -webkit-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+
+.underline6 {
+  position: absolute;
+  top: 12%;
+  left: 46%;
   background-color: steelblue;
   width: 7.5em;
   height: 0.1em;
