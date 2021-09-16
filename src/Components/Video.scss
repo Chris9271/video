@@ -1,0 +1,31 @@
+.iterate-video{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    // background-color: antiquewhite;
+}
+
+.video-appearance{
+    margin: 0.7rem;
+    max-width: 23.6%;
+}
+
+.video-image{
+    
+}
+
+.image{
+    width: 100%;
+    cursor: pointer;
+}
+
+.video-description{
+    font-size: 1.3em;
+    padding: 0.2em 0.1em;
+}
+
+.video-source{
+    font-size: 1.6em;
+    font-weight: 600;
+    color: gray;
+}

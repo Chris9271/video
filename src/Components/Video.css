@@ -1,0 +1,30 @@
+.iterate-video {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.video-appearance {
+  margin: 0.7rem;
+  max-width: 23.6%;
+}
+
+.image {
+  width: 100%;
+  cursor: pointer;
+}
+
+.video-description {
+  font-size: 1.3em;
+  padding: 0.2em 0.1em;
+}
+
+.video-source {
+  font-size: 1.6em;
+  font-weight: 600;
+  color: gray;
+}
+/*# sourceMappingURL=Video.css.map */
