@@ -1,0 +1,29 @@
+/* RWD Spec */
+$sm: 575px;
+$md: 767px;
+$lg: 991px;
+$xl: 1199px;
+$xxl: 1399px;
+
+@import './styles/reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+$color--font: #777676;
+
+.App {
+  background-color: #343d47;
+  color: $color--font;
+
+  .e-copy {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+
+@import './styles/header.scss';
+@import './styles/video.scss';

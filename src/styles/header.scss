@@ -1,0 +1,100 @@
+.c-header {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: .5rem;
+
+    .e-header__title {
+        padding: 1rem;
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    &__options {
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .c-options {
+            display: flex;
+            list-style: none;
+            position: relative;
+            width: max-content;
+            padding: 0;
+
+            &__link {
+
+                &-one,
+                &-two,
+                &-three,
+                &-four,
+                &-five,
+                &-six,
+                &-seven,
+                &-eight {
+                    padding: 0.5rem 1rem;
+                    cursor: pointer;
+                }
+
+                &:hover {
+                    color: white;
+                }
+            }
+
+            .change-textcolor {
+                color: white;
+            }
+
+            &__underline {
+                position: absolute;
+                bottom: 0;
+                transform: translate(-50%, -50%);
+                background-color: white;
+                width: 1.75rem;
+                height: .1rem;
+                z-index: 1;
+                transition: all linear 0.3s;
+            }
+
+            .html {
+                left: 5%;
+            }
+
+            .css {
+                left: 14%;
+            }
+
+            .javascript {
+                left: 24.5%;
+            }
+
+            .react {
+                left: 36.5%;
+            }
+
+            .node {
+                left: 46%;
+            }
+
+            .datastructure {
+                left: 58%;
+            }
+
+            .learn {
+                left: 76%;
+            }
+
+            .music {
+                left: 92%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $xxl) {
+    .c-header {
+        width: 100%;
+    }
+}

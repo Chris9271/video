@@ -1,17 +1,18 @@
 import React, {useContext} from 'react';
-import Header from './Components/Header/Header';
-import Video from './Components/SourceVideo/Videos';
+import Header from './Components/Header';
+import Video from './Components/Video';
 import {Context} from './Components/Context';
-import './App.css';
+import './App.scss';
 
 const App = () => {
   const contextData = useContext(Context);
-  const {defaultVideo, updateQuery, checkDefault} = contextData;
+  const {defaultVideo, updateQuery} = contextData;
 
   return (
     <div className="App">
-      <Header updateVideo={updateQuery} checkDefault={checkDefault}/>
+      <Header updateQuery={updateQuery}/>
       <Video videos={defaultVideo}/>
+      <p className="e-copy">&copy; CodeTube All rights reserved.</p>
     </div>
   );
 }
